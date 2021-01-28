@@ -1,29 +1,22 @@
 jQuery(document).ready(function ($) {
-  // Add smooth scrolling to all links
   $(".fixed-side-navbar a, .primary-button a, #footer-menu-links a").on(
     "click",
     function (event) {
-      // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
-        // Prevent default anchor click behavior
         event.preventDefault();
 
-        // Store hash
         var hash = this.hash;
 
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $("html, body").animate(
           {
             scrollTop: $(hash).offset().top,
           },
           800,
           function () {
-            // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
           }
         );
-      } // End if
+      } 
     }
   );
 
@@ -47,12 +40,12 @@ jQuery(document).ready(function ($) {
   owl.owlCarousel({
     pagination: true,
     paginationNumbers: false,
-    autoPlay: 6000, //Set AutoPlay to 3 seconds
-    items: 3, //10 items above 1000px browser width
-    itemsDesktop: [1000, 3], //5 items between 1000px and 901px
-    itemsDesktopSmall: [900, 2], // betweem 900px and 601px
-    itemsTablet: [600, 1], //2 items between 600 and 0
-    itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+    autoPlay: 6000, 
+    items: 3, 
+    itemsDesktop: [1000, 3], 
+    itemsDesktopSmall: [900, 2], 
+    itemsTablet: [600, 1], 
+    itemsMobile: false, 
   });
 
   function copyToClipboard() {
@@ -674,24 +667,24 @@ const aboutData = {
   tabContent: [
     {
       imgUrl: "img/1st-tab.jpg",
-      alt: "nokti",
+      alt: "isidora",
       text:
         "Hi, My Name is Isidora Nikolić, I was born on the 26th of June 1997. I live in the Nova Pazova.",
     },
     {
-      imgUrl: "img/2th-tab.jpg",
-      alt: "nokti",
+      imgUrl: "img/2nd-tab.jpg",
+      alt: "osnovna skola nova pazova",
       text:
         "I started primary school in 2003 and graduated in 2011.",
     },
     {
-      imgUrl: "img/3th-tab.jpg",
-      alt: "nokti",
+      imgUrl: "img/3rd-tab.jpg",
+      alt: "vazduhoplovna akademija beograd",
       text:
         "After elementary school in 2011 i started Aviation academy."},
     {
       imgUrl: "img/4th-tab.jpg",
-      alt: "nokti",
+      alt: "visa ict beograd",
       text:
         "After graduating from high school, I started studying at 'Visoka ICT' school, and until graduation I am separated by two exams."},
   ],
@@ -793,7 +786,7 @@ const footerAssets = [
   },
   {
     name: "Docs",
-    href: "",
+    href: "https://isidoranikolic.github.io/web-programiranje1-nails-studio/dokumentacija.pdf",
   },
 ];
 
