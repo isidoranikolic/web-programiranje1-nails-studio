@@ -1,3 +1,7 @@
+* {
+  user-select: none;
+}
+
 p {
   font-size: 15px;
   line-height: 25px;
@@ -44,6 +48,12 @@ body.modal-open {
   padding: 30px 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media screen and (max-width: 500px) {
+  .fixed-side-navbar {
+    display: none;
+  }
 }
 .fixed-side-navbar:hover {
   background: transparent;
@@ -517,6 +527,12 @@ section {
   max-width: 400px;
 }
 
+@media screen and (max-width: 500px) {
+  #exampleModal .modal-body img {
+    max-width: 80%;
+  }
+}
+
 footer {
   text-align: center;
   background-color: #282b2f;
@@ -533,16 +549,16 @@ footer ul {
   list-style: none;
 }
 
-footer ul li {
+footer ul#social-content li {
   display: inline-block;
   margin: 0px 4px;
 }
 
-footer ul li a img {
+footer ul#social-content li a img {
   width: 20px;
 }
 
-footer ul li a {
+footer ul#social-content li a {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -556,9 +572,23 @@ footer ul li a {
   font-size: 17px;
 }
 
-footer ul li a:hover {
+#equation-block {
+  font-size: 40px;
+}
+
+footer ul#social-content li a:hover {
   color: #282b2f;
   background-color: #af8383;
+}
+
+#footer-menu-links a,
+#footer-menu-assets a {
+  color: white;
+}
+
+#footer-menu-links a:hover,
+#footer-menu-assets a:hover {
+  color: #af8383;
 }
 
 footer p {
@@ -2082,4 +2112,12 @@ Javascript disabled
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
+}
+
+#color-picker svg {
+  enable-background: new 0 0 632.7 637;
+}
+
+#color-picker svg img {
+  overflow: visible;
 }

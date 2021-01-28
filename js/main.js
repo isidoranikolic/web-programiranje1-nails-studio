@@ -1,28 +1,31 @@
 jQuery(document).ready(function ($) {
   // Add smooth scrolling to all links
-  $(".fixed-side-navbar a, .primary-button a").on("click", function (event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+  $(".fixed-side-navbar a, .primary-button a, #footer-menu-links a").on(
+    "click",
+    function (event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+        // Store hash
+        var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $("html, body").animate(
-        {
-          scrollTop: $(hash).offset().top,
-        },
-        800,
-        function () {
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        }
-      );
-    } // End if
-  });
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          800,
+          function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          }
+        );
+      } // End if
+    }
+  );
 
   const topHeader = $(".parallax-content");
   topHeader.css({ "background-position": "center center" });
@@ -95,6 +98,7 @@ jQuery(document).ready(function ($) {
 
     const modal = $(this);
     modal.find(".modal-body img").attr("src", image);
+    modal.find(".modal-body img").attr("alt", heading);
     modal.find(".modal-title").text(heading);
     modal.find(".modal-body p").text(text);
   });
@@ -766,11 +770,38 @@ const footerData = {
   ],
 };
 
+const footerAssets = [
+  {
+    name: "main.js",
+    href: "https://isidoranikolic.github.io/web-programiranje1-nails-studio/js/main.js",
+  },
+  {
+    name: "plugins.js",
+    href: "https://isidoranikolic.github.io/web-programiranje1-nails-studio/js/plugins.js",
+  },
+  {
+    name: "main.css",
+    href: "https://isidoranikolic.github.io/web-programiranje1-nails-studio/css/main.css",
+  },
+  {
+    name: "robots.txt",
+    href: "https://isidoranikolic.github.io/web-programiranje1-nails-studio/robots.txt",
+  },
+  {
+    name: "sitemap",
+    href: "https://isidoranikolic.github.io/web-programiranje1-nails-studio/sitemap.xml",
+  },
+  {
+    name: "Docs",
+    href: "",
+  },
+];
+
 function createFooter() {
   const container = document.getElementById("social-content");
   let items = "";
 
-  footerData.social.map((item, index) => {
+  footerData.social.map((item) => {
     items += `<li>
         <a href="${item.url}" target="_blank">
         <img src="${item.icon}" alt="${item.alt}" />
@@ -783,6 +814,28 @@ function createFooter() {
   const footerButton = document.getElementById("footer-button");
 
   footerButton.innerHTML = footerData.buttonText;
+
+  const containerMenuAssets = document.getElementById("footer-menu-assets");
+  let assetsItems = "";
+
+  footerAssets.map((item) => {
+    assetsItems += `<li class="nav-item">
+      <a class="nav-link" target="_blank" href="${item.href}"><span>${item.name}</span></a>
+      </li>`;
+  });
+
+  containerMenuAssets.innerHTML = assetsItems;
+
+  const containerMenuLinks = document.getElementById("footer-menu-links");
+  let menuItems = "";
+
+  menuData.map((item) => {
+    menuItems += `<li class="nav-item">
+      <a class="nav-link" href="#${item.href}"><span>${item.text}</span></a>
+      </li>`;
+  });
+
+  containerMenuLinks.innerHTML = menuItems;
 }
 
 createFooter();
@@ -806,7 +859,6 @@ const colors = [
 ];
 
 function createColors() {
-  // Single part
   const container = document.getElementById("colors-block");
   let items = "";
 
