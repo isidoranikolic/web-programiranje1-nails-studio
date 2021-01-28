@@ -577,64 +577,64 @@ const portfolioData = [
     imageUrl: "img/1st-big-item.jpg",
     previewUrl: "img/1st-item.jpg",
     alt: "crveni nokti",
-    mainText: "Crveni nokti",
-    subText: "Gel lak",
+    mainText: "NailZ",
+    subText: "Gel nail extension",
   },
   {
     imageUrl: "img/2nd-big-item.jpg",
     previewUrl: "img/2nd-item.jpg",
     alt: "crveni nokti",
-    mainText: "Crveni nokti",
-    subText: "Gel lak",
+    mainText: "NailZ",
+    subText: "Gel polish",
   },
   {
     imageUrl: "img/3rd-big-item.jpg",
     previewUrl: "img/3rd-item.jpg",
     alt: "crveni nokti",
-    mainText: "Crveni nokti",
-    subText: "Gel lak",
+    mainText: "NailZ",
+    subText: "Nail extension tips",
   },
   {
     imageUrl: "img/4th-big-item.jpg",
     previewUrl: "img/4th-item.jpg",
     alt: "crveni nokti",
-    mainText: "Crveni nokti",
-    subText: "Gel lak",
+    mainText: "NailZ",
+    subText: "Gel polish",
   },
   {
     imageUrl: "img/5th-big-item.jpg",
     previewUrl: "img/5th-item.jpg",
     alt: "crveni nokti",
-    mainText: "Crveni nokti",
-    subText: "Gel lak",
+    mainText: "NailZ",
+    subText: "Gel nail extension",
   },
   {
     imageUrl: "img/6th-big-item.jpg",
     previewUrl: "img/6th-item.jpg",
     alt: "crveni nokti",
-    mainText: "Crveni nokti",
-    subText: "Gel lak",
+    mainText: "NailZ",
+    subText: "Gel polish",
   },
   {
     imageUrl: "img/7th-big-item.jpg",
     previewUrl: "img/7th-item.jpg",
     alt: "crveni nokti",
-    mainText: "Crveni nokti",
-    subText: "Gel lak",
+    mainText: " NailZ",
+    subText: "Nail extension tips",
   },
   {
     imageUrl: "img/8th-big-item.jpg",
     previewUrl: "img/8th-item.jpg",
     alt: "crveni nokti",
-    mainText: "Crveni nokti",
-    subText: "Gel lak",
+    mainText: "NailZ",
+    subText: "Gel polish",
   },
   {
     imageUrl: "img/9th-big-item.jpg",
     previewUrl: "img/9th-item.jpg",
     alt: "crveni nokti",
-    mainText: "Crveni nokti",
-    subText: "Gel lak",
+    mainText: "NailZ",
+    subText: "Gel nail extension",
   },
 ];
 
@@ -666,32 +666,30 @@ createPortfolio();
 // About
 
 const aboutData = {
-  nav: ["1997", "2008 - 2014", "2014 - 2018", "2018 - 2021"],
+  nav: ["1997", "2003 - 2011", "2011 - 2015", "2015"],
   tabContent: [
     {
       imgUrl: "img/1st-tab.jpg",
       alt: "nokti",
       text:
-        " Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique.",
+        "Hi, My Name is Isidora Nikolić, I was born on the 26th of June 1997. I live in the Nova Pazova.",
     },
+    {
+      imgUrl: "img/2th-tab.jpg",
+      alt: "nokti",
+      text:
+        "I started primary school in 2003 and graduated in 2011.",
+    },
+    {
+      imgUrl: "img/3th-tab.jpg",
+      alt: "nokti",
+      text:
+        "After elementary school in 2011 i started Aviation academy."},
     {
       imgUrl: "img/4th-tab.jpg",
       alt: "nokti",
       text:
-        " Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique.",
-    },
-    {
-      imgUrl: "img/4th-tab.jpg",
-      alt: "nokti",
-      text:
-        " Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique.",
-    },
-    {
-      imgUrl: "img/4th-tab.jpg",
-      alt: "nokti",
-      text:
-        " Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique.",
-    },
+        "After graduating from high school, I started studying at 'Visoka ICT' school, and until graduation I am separated by two exams."},
   ],
 };
 
