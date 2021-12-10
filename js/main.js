@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
     $('.colors-block').css('borderBottomColor', $(this).attr('data-color'));
     $('.colors-block').attr('color', $(this).attr('title'));
   });
-  
+
   $('.preloader').fadeOut('slow');
 
   $('.fixed-side-navbar a, .primary-button a, #footer-menu-links a').on(
@@ -292,7 +292,7 @@ function dateValidate(date) {
     return 'Date is missing!';
   }
 
-  const dateReg = /^(?:(?:31(\|-|.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\|-|.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\|-|.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\|-|.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
+  const dateReg = /^([0-2][0-9]|(3)[0-1])(-)(((0)[0-9])|((1)[0-2]))(-)\d{4}$/;
 
   if (!dateReg.test(date)) {
     return 'Date format is not correct, it needs to be DD-MM-YYYY!';
@@ -329,7 +329,7 @@ function nameValidate(name) {
     return 'Your name is missing!';
   }
 
-  const nameReg = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+  const nameReg = /^[A-ZČĆŽŠĐ][a-zčćžšđ]{1,20}(\s[A-ZČĆŽŠĐ][a-zčćžšđ]{1,30})+$/;
 
   if (!nameReg.test(name)) {
     return 'Please enter your name properly! First letter of each word has to be capitalized, no special characters and no numbers.';
@@ -343,7 +343,7 @@ function emailValidate(email) {
     return 'Your email is missing!';
   }
 
-  const emailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const emailReg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
   if (!emailReg.test(String(email).toLowerCase())) {
     return 'Your email address is invalid. It should look something like this: username@somemail.com!';
@@ -375,7 +375,7 @@ function createHeroHeader() {
   const container = document.getElementById('hero-header-content');
 
   container.innerHTML = `<h1>${heroHeaderData.heading}</h1>
-      <span><em>${heroHeaderData.highlightedText}</em> ${heroHeaderData.subtext}</span>
+      <h2><em>${heroHeaderData.highlightedText}</em> ${heroHeaderData.subtext}</h2>
       <div class="primary-button">
         <a href="#services">${heroHeaderData.buttonText}</a>
       </div>`;
